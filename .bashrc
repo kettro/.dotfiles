@@ -20,13 +20,16 @@ fi
 
 
 # External files
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f ~/.dotfiles/.bash_aliases ]; then
+    . ~/.dotfiles/.bash_aliases
 fi
-if [ -f ~/.bash_utils ]; then
-    . ~/.bash_utils
+if [ -f ~/.dotfiles/.bash_utils ]; then
+    . ~/.dotfiles/.bash_utils
 fi
-if [ -f ~/.bash_env ]; then
-    . ~/.bash_env
+if [ -f ~/.dotfiles/.bash_env ]; then
+    . ~/.dotfiles/.bash_env
+fi
+if [ -f ~/.dotfiles/.bash_shortcuts ]; then
+    . ~/.dotfiles/.bash_shortcuts
 fi
 
