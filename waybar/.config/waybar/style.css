@@ -1,0 +1,133 @@
+* {
+    border: none;
+    border-radius: 15px 15px 1px 1px;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    min-height: 0;
+}
+
+window#waybar {
+    border-radius: 0;
+    background: #404124;
+    border-bottom: 2px solid rgba(100, 114, 125, 0.5);
+    color: #decc8c;
+    font-weight: bold;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    /*background: transparent;*/
+    color: #ffffff;
+    /*border-bottom: 3px solid transparent;*/
+}
+
+#workspaces button.focused {
+    background: #8f3b1b;
+}
+
+#mode {
+    background: #64727D;
+    border-bottom: 3px solid #ffffff;
+}
+
+#clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #custom-spotify, #tray, #mode, #idle_inhibitor, #custom-network {
+    padding: 0 10px;
+    margin: 0 5px;
+}
+
+#clock {
+    background-color: #64727D;
+}
+
+#battery {
+    background: #a1aab5;
+    /*color: #465969;*/ /* This is a great blue- don't lose */
+    /*color:  #4f505e;*/
+    color: #403124;
+}
+
+/*
+#battery.charging {
+    color: #ffffff;
+    background-color: #26A65B;
+}
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+*/
+#battery.critical:not(.charging) {
+    background: #f53c3c;
+    color: #ffffff;
+}
+
+#cpu {
+    background: #668d3c;
+    color: #403124;
+}
+
+#memory {
+    background: #4e6172;
+    color: #b99c6b;
+}
+
+#backlight {
+    /*background: #f1c40f;*/
+    background: #decc8c;
+    color: #403124;
+}
+
+#network, #custom-network {
+    background: #d98f0a;
+    color: #52122a;
+}
+
+#pulseaudio {
+    background: #a9a18c;
+    color: #403124;
+}
+
+/*
+#pulseaudio.muted {
+    background: #90b1b1;
+    color: #2a5c45;
+}*/
+
+#custom-spotify {
+    background:  #4f505e;
+    color: #b99c6b;
+}
+
+#temperature {
+    background: #623a1a;
+    color: #bdd09f;
+}
+
+#temperature.critical {
+    background: #eb4d4b;
+}
+
+#tray {
+    background-color: #2980b9;
+}
+
+#idle_inhibitor {
+    background-color: #2d3436;
+}
+
+#idle_inhibitor.activated {
+    background-color: #ecf0f1;
+    color: #2d3436;
+}
