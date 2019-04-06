@@ -1,0 +1,27 @@
+! General Term Behavior
+*selectToClipboard: true
+
+! XFT Options
+!Xft.dpi: 140
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintsfull
+Xft.lcdfilter: lcddefault
+
+! XTerm
+XTerm.termName: xterm-256color
+XTerm*locale: true
+XTerm*saveLines: 25000
+XTerm*selectToClipboard: true
+*pointerMode: 0
+
+! URXVT
+URxvt*visualBell: true
+URxvt*scrollTtyKeypress: true
+URxvt*skipScroll: true
+URxvt*scrollBar: false
+URxvt*saveLines: 25000
+
+#include ".xcolors/colors.xresources"
