@@ -13,6 +13,8 @@
 " * AutoCommands
 " * Includes
 """""""""""""""""""""""""""
+" * Plugin Management
+runtime plugin_management.vim
 
 " * Basic Config
 set nocompatible
@@ -24,26 +26,23 @@ set ttyfast
 set cursorline
 set mouse=a
 if !has ('nvim')
-    set ttymouse=xterm2
+    set ttymouse=sgr
 endif
-"set scrolloff=5
 set backspace=indent,eol,start
 
 " * Colors
 set t_ut=
 set termguicolors
 function! GetCurrentColor()
-    g:gruvbox_italics=1
     set background=dark
-    colorscheme gruvbox
-    " if !empty( ( globpath( &rtp, '/colors/zenburn.vim' ) ) )
-    "     colorscheme zenburn
-    " endif
+    "g:gruvbox_italics=1
+    "colorscheme gruvbox
+    "colorscheme Base2Tone_ForestDark
+    colorscheme Base2Tone_DesertDark
 endfunction
 
 "* Ctags
 set tags+=.tags;$HOME
-nmap <leader>t g<C-t>
 
 " * Folds
 set foldenable
@@ -65,9 +64,9 @@ set autoindent
 " >> Add Language-specific tab rules
 au FileType clojure setlocal tabstop=2 shiftwidth=2 softtabstop=2
 au FileType python setlocal tabstop=2 shiftwidth=2 softtabstop=2
-au FileType c setlocal tabstop=2 shiftwidth=2 softtabstop=2
-au FileType c++ setlocal tabstop=2 shiftwidth=2 softtabstop=2
-au FileType cpp setlocal tabstop=2 shiftwidth=2 softtabstop=2
+au FileType c setlocal tabstop=4 shiftwidth=4 softtabstop=4 cc=101
+au FileType c++ setlocal tabstop=4 shiftwidth=4 softtabstop=4 cc=101
+au FileType cpp setlocal tabstop=4 shiftwidth=4 softtabstop=4 cc=101
 
 " * Movement Aliases
 nnoremap j gj
@@ -95,6 +94,6 @@ set splitright
 au VimEnter * :call GetCurrentColor()
 
 " * Includes
-source .vim/plugins.vim
+runtime plugin_options.vim
 
 
