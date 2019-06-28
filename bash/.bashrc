@@ -32,6 +32,9 @@ fi
 if [ -f ~/.dotfiles/.bash/.bash_shortcuts ]; then
     . ~/.dotfiles/.bash/.bash_shortcuts
 fi
+if [ -f ~/.dotfiles/.bash/.dircolors ]; then
+    eval $( dircolors -b ~/.dotfiles/.bash/.dircolors )
+fi
 # Local machine settings
 if [ -f ~/.bash_env ]; then
     . ~/.bash_env

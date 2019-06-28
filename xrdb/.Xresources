@@ -2,7 +2,7 @@
 *selectToClipboard: true
 
 ! XFT Options
-!Xft.dpi: 140
+Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
 Xft.rgba: rgb
@@ -15,6 +15,11 @@ XTerm.termName: xterm-256color
 XTerm*locale: true
 XTerm*saveLines: 25000
 XTerm*selectToClipboard: true
+XTerm*faceName: Consolas
+XTerm*faceSize: 12
+XTerm*geometry: 90x30
+XTerm*visualBell: false
+!XTerm*visualBell: true
 *pointerMode: 0
 
 ! URXVT

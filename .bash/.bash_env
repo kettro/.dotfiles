@@ -18,3 +18,7 @@ export PATH=/usr/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=~/usr/bin:$PATH
 
+# WSL Display
+if grep -q Microsoft /proc/version; then
+    export DISPLAY=:0
+fi
