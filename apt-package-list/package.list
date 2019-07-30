@@ -6,6 +6,12 @@ vim
 ctags
 make
 cmake
+stow
+tmux
+screen
+openssh
+curl
+wget
 
 pulseaudio
 pavucontrol
@@ -15,4 +21,3 @@ spotify-client
 i3
 rofi
 xterm
-
