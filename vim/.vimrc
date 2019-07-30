@@ -10,6 +10,7 @@
 " * Movement Aliases
 " * Whitespace
 " * Windows and Splits
+" * Clipboard
 " * AutoCommands
 " * Includes
 """""""""""""""""""""""""""
@@ -33,12 +34,13 @@ set backspace=indent,eol,start
 " * Colors
 set t_ut=
 set termguicolors
+
 function! GetCurrentColor()
     set background=dark
-    "g:gruvbox_italics=1
     "colorscheme gruvbox
+    colorscheme colorsbox-material
     "colorscheme Base2Tone_ForestDark
-    colorscheme Base2Tone_DesertDark
+    "colorscheme Base2Tone_DesertDark
 endfunction
 
 "* Ctags
@@ -50,7 +52,7 @@ set foldlevelstart=10
 set foldnestmax=10
 "set foldmethod=indent
 set foldmethod=syntax
-nnoremap <Space> za
+nnoremap <Space> zA
 
 " * Leader
 let mapleader=","
@@ -64,9 +66,12 @@ set autoindent
 " >> Add Language-specific tab rules
 au FileType clojure setlocal tabstop=2 shiftwidth=2 softtabstop=2
 au FileType python setlocal tabstop=2 shiftwidth=2 softtabstop=2
-au FileType c setlocal tabstop=4 shiftwidth=4 softtabstop=4 cc=101
-au FileType c++ setlocal tabstop=4 shiftwidth=4 softtabstop=4 cc=101
-au FileType cpp setlocal tabstop=4 shiftwidth=4 softtabstop=4 cc=101
+"au FileType c setlocal tabstop=4 shiftwidth=4 softtabstop=4 cc=101
+au FileType c setlocal tabstop=8 shiftwidth=8 softtabstop=8 cc=81
+"au FileType c++ setlocal tabstop=4 shiftwidth=4 softtabstop=4 cc=101
+au FileType c++ setlocal tabstop=8 shiftwidth=8 softtabstop=8 cc=81
+"au FileType cpp setlocal tabstop=4 shiftwidth=4 softtabstop=4 cc=101
+au FileType cpp setlocal tabstop=8 shiftwidth=8 softtabstop=8 cc=81
 
 " * Movement Aliases
 nnoremap j gj
@@ -83,11 +88,17 @@ set laststatus=2
 
 " * Whitespace
 set list
-set listchars=tab:>-,trail:·,extends:>,precedes:<,nbsp:·
+set listchars=tab:\|·,trail:·,extends:>,precedes:<,nbsp:·
 nnoremap dc cc<Esc>
 
 " * Windows and Splits
 set splitright
+
+" * Clipboard
+nnoremap <Leader>y "+y
+nnoremap <Leader>p "+p
+nnoremap <Leader>Y "*y
+nnoremap <Leader>P "*p
 
 " * AutoCommands
 "   > Color

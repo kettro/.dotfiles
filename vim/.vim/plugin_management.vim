@@ -21,10 +21,10 @@ Plug 'justinmk/vim-syntax-extra' "Another C Syntax Option
 " Features
 Plug 'scrooloose/nerdtree'
 Plug 'zefei/vim-wintabs'
+Plug 'vim-scripts/DoxygenToolkit.vim'
 
 " Color
 Plug 'morhetz/gruvbox'
-Plug 'KKPMW/sacredforest-vim'
 Plug 'mkarmona/colorsbox'
 Plug 'atelierbram/Base2Tone-vim'
 

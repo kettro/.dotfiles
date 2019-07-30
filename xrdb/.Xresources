@@ -18,11 +18,12 @@ XTerm*selectToClipboard: true
 XTerm*faceName: Consolas
 XTerm*faceSize: 12
 XTerm*geometry: 90x30
-XTerm*visualBell: false
-!XTerm*visualBell: true
+!XTerm*visualBell: false
+XTerm*visualBell: true
 *pointerMode: 0
 
 ! URXVT
+URxvt*termName: rxvt-unicode-256color
 URxvt*visualBell: true
 URxvt*scrollTtyKeypress: true
 URxvt*skipScroll: true
